@@ -109,7 +109,7 @@ with gui.window(label='Nexus', width=350, height=400, no_title_bar=True, no_resi
 
         with gui.tab(label="About"):
             gui.add_text("Version : 1.0.1")
-            gui.add_text("GitHub Page : ")
+            gui.add_text("GitHub Page : github.com/Calvineries/External-sv_cheats-Bypass")
             gui.add_text("")
             gui.add_text("Author : Calvineries")
             gui.add_text("Contributors: ...")
