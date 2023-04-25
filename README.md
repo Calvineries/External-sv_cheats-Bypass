@@ -1,4 +1,4 @@
-# External-sv_cheats-Bypass
+# External sv_cheats Bypass
 Bypass sv_cheats 1 on CS:GO, GMOD, TF2, CSS...
 
 Use it at your own risk.
