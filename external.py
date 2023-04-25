@@ -120,7 +120,7 @@ with gui.window(label='Nexus', width=350, height=400, no_title_bar=True, no_resi
                 gui.add_checkbox(label='r_drawothermodels', callback=checkbox_drawmodels)
 
         with gui.tab(label="About"):
-            gui.add_text("Version : 1.0.1")
+            gui.add_text("Version : 1.0.2")
             gui.add_text("GitHub Page : github.com/Calvineries/External-sv_cheats-Bypass")
             gui.add_text("")
             gui.add_text("Author : Calvineries")
