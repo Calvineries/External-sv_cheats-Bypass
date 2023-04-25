@@ -50,6 +50,18 @@ def game_selection(sender, data):
         gui.set_item_label("ShowGameTab", game)
         gui.disable_item("SelectGameCombo")
 
+    if game == "GMOD (default branch)":
+        pm = pymem.Pymem('hl2.exe')
+        client = pymem.pymem.process.module_from_name(pm.process_handle, 'client.dll').lpBaseOfDll
+        engine = pymem.pymem.process.module_from_name(pm.process_handle, 'engine.dll').lpBaseOfDll
+        #GMOD Address
+        sv_cheatsaddress = 0x69B6A8
+        r_drawothermodelsaddress = 0x6EB2A0
+
+        gui.show_item("ShowGameTab")
+        gui.set_item_label("ShowGameTab", game)
+        gui.disable_item("SelectGameCombo")
+
 
 #Checkbox sv_cheats
 def checkbox_svcheats(sender, data):
@@ -87,7 +99,7 @@ with gui.window(label='Nexus', width=350, height=400, no_title_bar=True, no_resi
         with gui.tab(label='Game Selection'):
             gui.add_text("Select the game :")
             gui.add_text("(The game must already be launched)")
-            gui.add_combo(("CS:GO", "TF2", "CSS"), callback=game_selection, tag="SelectGameCombo")
+            gui.add_combo(("CS:GO", "TF2", "CSS", "GMOD (default branch)"), callback=game_selection, tag="SelectGameCombo")
 
         with gui.tab(label=game, show=False, tag="ShowGameTab"):
             gui.add_checkbox(label='sv_cheats', callback=checkbox_svcheats)
