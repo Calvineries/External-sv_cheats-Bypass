@@ -62,6 +62,18 @@ def game_selection(sender, data):
         gui.set_item_label("ShowGameTab", game)
         gui.disable_item("SelectGameCombo")
 
+    if game == "L4D2":
+        pm = pymem.Pymem('left4dead2.exe')
+        client = 0
+        engine = pymem.pymem.process.module_from_name(pm.process_handle, 'engine.dll').lpBaseOfDll
+        #L4D2 Address
+        sv_cheatsaddress = 0x6719A0
+        r_drawothermodelsaddress = 0x7B110768
+
+        gui.show_item("ShowGameTab")
+        gui.set_item_label("ShowGameTab", game)
+        gui.disable_item("SelectGameCombo")
+
 
 #Checkbox sv_cheats
 def checkbox_svcheats(sender, data):
@@ -99,7 +111,7 @@ with gui.window(label='Nexus', width=350, height=400, no_title_bar=True, no_resi
         with gui.tab(label='Game Selection'):
             gui.add_text("Select the game :")
             gui.add_text("(The game must already be launched)")
-            gui.add_combo(("CS:GO", "GMOD (default branch)", "TF2", "CSS"), callback=game_selection, tag="SelectGameCombo")
+            gui.add_combo(("CS:GO", "GMOD (default branch)", "TF2", "CSS", "L4D2"), callback=game_selection, tag="SelectGameCombo")
 
         with gui.tab(label=game, show=False, tag="ShowGameTab"):
             gui.add_checkbox(label='sv_cheats', callback=checkbox_svcheats)
