@@ -1,5 +1,5 @@
 # External sv_cheats Bypass
-Bypass "sv_cheats 1" for CS:GO, GMOD, TF2, CSS...  
+Bypass "sv_cheats 1" for CS:GO, GMOD, TF2, CSS, L4D2...  
 Never cheat on your main account.  
 Use it at your own risk.  
 
