@@ -88,7 +88,7 @@ def checkbox_drawmodels(sender, data):
 
 #Interface
 gui.create_context()
-gui.create_viewport(title='External Sv_Cheats Bypass', width=350, height=350)
+gui.create_viewport(title='External sv_cheats Bypass', width=350, height=350)
 gui.set_viewport_resizable(False)
 gui.setup_dearpygui()
 gui.set_viewport_always_top(True)
@@ -99,7 +99,7 @@ with gui.window(label='Nexus', width=350, height=400, no_title_bar=True, no_resi
         with gui.tab(label='Game Selection'):
             gui.add_text("Select the game :")
             gui.add_text("(The game must already be launched)")
-            gui.add_combo(("CS:GO", "TF2", "CSS", "GMOD (default branch)"), callback=game_selection, tag="SelectGameCombo")
+            gui.add_combo(("CS:GO", "GMOD (default branch)", "TF2", "CSS"), callback=game_selection, tag="SelectGameCombo")
 
         with gui.tab(label=game, show=False, tag="ShowGameTab"):
             gui.add_checkbox(label='sv_cheats', callback=checkbox_svcheats)
@@ -108,7 +108,7 @@ with gui.window(label='Nexus', width=350, height=400, no_title_bar=True, no_resi
                 gui.add_checkbox(label='r_drawothermodels', callback=checkbox_drawmodels)
 
         with gui.tab(label="About"):
-            gui.add_text("Version : 1.0.0")
+            gui.add_text("Version : 1.0.1")
             gui.add_text("GitHub Page : ")
             gui.add_text("")
             gui.add_text("Author : Calvineries")
