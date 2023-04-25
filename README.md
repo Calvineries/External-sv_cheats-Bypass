@@ -6,10 +6,14 @@ Use it at your own risk.
 
 ## I'm a noob how to use it?  
 If you don't know how to use python, there is also an .exe version.  
-You can [download it here](https://github.com/Calvineries/External-sv_cheats-Bypass/releases/download/1.0.1/external.exe).
+You can [download it here](https://github.com/Calvineries/External-sv_cheats-Bypass/releases/download/1.0.1/external.exe).  
+
+## What are python dependencies?
+pip install dearpygui  
+pip install pymem  
 
 ## Can I contribute?  
-Yes ! You can add a new game, add a useful command and update addresse.
+Yes ! You can add a new game, add a useful command and update addresse.  
 
 ## Can I suggest a game or a useful command?  
-Yes ! Create an issue with your suggestion.
+Yes ! Create an issue with your suggestion.  
