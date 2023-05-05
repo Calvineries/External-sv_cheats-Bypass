@@ -48,7 +48,7 @@ def game_selection(sender, data):
 
         gui.show_item("ShowGameTab")
         gui.set_item_label("ShowGameTab", game)
-        gui.disable_item("SelectGameCombo")ccc
+        gui.disable_item("SelectGameCombo")
 
     if game == "GMOD (default branch)":
         pm = pymem.Pymem('hl2.exe')
