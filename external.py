@@ -48,7 +48,7 @@ def game_selection(sender, data):
 
         gui.show_item("ShowGameTab")
         gui.set_item_label("ShowGameTab", game)
-        gui.disable_item("SelectGameCombo")
+        gui.disable_item("SelectGameCombo")ccc
 
     if game == "GMOD (default branch)":
         pm = pymem.Pymem('hl2.exe')
@@ -57,6 +57,18 @@ def game_selection(sender, data):
         #GMOD Address
         sv_cheatsaddress = 0x69B6A8
         r_drawothermodelsaddress = 0x6EB2A0
+
+        gui.show_item("ShowGameTab")
+        gui.set_item_label("ShowGameTab", game)
+        gui.disable_item("SelectGameCombo")
+        
+     if game == "GMOD (x64)":
+        pm = pymem.Pymem('gmod.exe')
+        client = pymem.pymem.process.module_from_name(pm.process_handle, 'client.dll').lpBaseOfDll
+        engine = pymem.pymem.process.module_from_name(pm.process_handle, 'engine.dll').lpBaseOfDll
+        #GMOD Address
+        sv_cheatsaddress = 0x7BD318
+        r_drawothermodelsaddress = 0x83A998
 
         gui.show_item("ShowGameTab")
         gui.set_item_label("ShowGameTab", game)
@@ -135,7 +147,7 @@ with gui.window(label='Nexus', width=350, height=400, no_title_bar=True, no_resi
         with gui.tab(label='Game Selection'):
             gui.add_text("Select the game :")
             gui.add_text("(The game must already be launched)")
-            gui.add_combo(("CS:GO", "GMOD (default branch)", "TF2", "CSS", "L4D2", "L4D1", "Portal2"), callback=game_selection, tag="SelectGameCombo")
+            gui.add_combo(("CS:GO", "GMOD (default branch)", "GMOD (x64)", "TF2", "CSS", "L4D2", "L4D1", "Portal2"), callback=game_selection, tag="SelectGameCombo")
 
         with gui.tab(label=game, show=False, tag="ShowGameTab"):
             gui.add_checkbox(label='sv_cheats', callback=checkbox_svcheats)
@@ -144,7 +156,7 @@ with gui.window(label='Nexus', width=350, height=400, no_title_bar=True, no_resi
                 gui.add_checkbox(label='r_drawothermodels', callback=checkbox_drawmodels)
 
         with gui.tab(label="About"):
-            gui.add_text("Version : 1.0.4")
+            gui.add_text("Version : 1.0.5")
             gui.add_text("GitHub Page : github.com/Calvineries/External-sv_cheats-Bypass")
             gui.add_text("")
             gui.add_text("Author : Calvineries")
