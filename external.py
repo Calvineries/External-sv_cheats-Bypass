@@ -62,7 +62,7 @@ def game_selection(sender, data):
         gui.set_item_label("ShowGameTab", game)
         gui.disable_item("SelectGameCombo")
         
-     if game == "GMOD (x64)":
+    if game == "GMOD (x64)":
         pm = pymem.Pymem('gmod.exe')
         client = pymem.pymem.process.module_from_name(pm.process_handle, 'client.dll').lpBaseOfDll
         engine = pymem.pymem.process.module_from_name(pm.process_handle, 'engine.dll').lpBaseOfDll
