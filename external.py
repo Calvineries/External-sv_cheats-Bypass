@@ -49,7 +49,7 @@ def game_selection(sender, data):
         engine = pymem.pymem.process.module_from_name(pm.process_handle, 'engine.dll').lpBaseOfDll
         #GMOD Address
         sv_cheatsaddress = 0x69B6A8
-        r_drawothermodelsaddress = 0x6EB2A0
+        r_drawothermodelsaddress = 0x6EC320
         
     if game == "GMOD (x64)":
         pm = pymem.Pymem('gmod.exe')
