@@ -117,12 +117,12 @@ def checkbox_drawmodels(sender, data):
 
 #Interface
 gui.create_context()
-gui.create_viewport(title='External sv_cheats Bypass', width=350, height=350)
+gui.create_viewport(title='External sv_cheats Bypass', decorated=True, width=370, height=400)
 gui.set_viewport_resizable(False)
 gui.setup_dearpygui()
 gui.set_viewport_always_top(True)
 
-with gui.window(label='Nexus', width=350, height=400, no_title_bar=True, no_resize=True, no_move=True):
+with gui.window(label='Nexus', width=370, height=400, no_title_bar=True, no_resize=True, no_move=True):
     with gui.tab_bar(label='Tabs'):
 
         with gui.tab(label='Game Selection'):
