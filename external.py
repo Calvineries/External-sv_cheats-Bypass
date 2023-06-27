@@ -33,7 +33,7 @@ def game_selection(sender, data):
         engine = pymem.pymem.process.module_from_name(pm.process_handle, 'engine.dll').lpBaseOfDll
         #CSGO Address
         sv_cheatsaddress = 0x5A4268
-        r_drawothermodelsaddress = 0xDE4660
+        r_drawothermodelsaddress = 0xDE5670
 
     if game == "CSS":
         pm = pymem.Pymem('hl2.exe')
