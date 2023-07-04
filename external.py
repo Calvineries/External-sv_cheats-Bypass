@@ -49,7 +49,7 @@ def game_selection(sender, data):
         engine = pymem.pymem.process.module_from_name(pm.process_handle, 'engine.dll').lpBaseOfDll
         #GMOD Address
         sv_cheatsaddress = 0x69B6A8
-        r_drawothermodelsaddress = 0x6EC320
+        r_drawothermodelsaddress = 0x6F8D70
         
     if game == "GMOD (x64)":
         pm = pymem.Pymem('gmod.exe')
@@ -57,7 +57,7 @@ def game_selection(sender, data):
         engine = pymem.pymem.process.module_from_name(pm.process_handle, 'engine.dll').lpBaseOfDll
         #GMOD x64 Address
         sv_cheatsaddress = 0x7BD318
-        r_drawothermodelsaddress = 0x83A998
+        r_drawothermodelsaddress = 0x893FE8
 
     if game == "L4D2":
         pm = pymem.Pymem('left4dead2.exe')
